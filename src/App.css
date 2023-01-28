@@ -1,0 +1,25 @@
+.App {
+  /* text-align: center; */
+  list-style: none;
+}
+main{
+  height: 100vh;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 1rem;
+  color: aliceblue;
+  font-weight: bold;
+  background-color: rgb(24, 94, 71);
+}
+.contacts{
+  text-align: center;
+}
+.ContactDetail{
+  padding: 1rem;
+}
+
+

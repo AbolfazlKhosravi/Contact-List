@@ -1,0 +1,27 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: .2rem 1rem;
+    color: #444;
+    border-bottom: 2px solid #444;
+    font-weight: bold;
+    height: 5rem;
+}
+.active{
+    color: rgb(0, 131, 87);
+}
+
+nav ul {
+    display: flex;
+}
+nav ul li {
+    display: flex;
+    list-style: none;
+    margin-left: 1rem;
+}
+a{
+    color: #444;
+    text-decoration: none;
+}

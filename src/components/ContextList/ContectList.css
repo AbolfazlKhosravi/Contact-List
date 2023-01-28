@@ -1,0 +1,59 @@
+
+.List{
+    /* padding: 0rem 1rem; */
+    color: #444;
+    margin: 0rem 7rem;
+}
+.ContectList{
+    border-bottom: 1px solid rgb(196, 195, 195);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 0rem;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .7rem;
+    font-size: 2rem;
+    color: rgb(15, 104, 74);
+    margin-left: 1rem;
+}
+.trash{
+    color: red;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.Specifications{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 20%;
+}
+.chenge{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.edit{
+    font-size: 1.4rem;
+    width: 10px;
+    height: 11px;
+    margin-right: 3rem;
+    background-color: #fff;
+    color: rgb(5, 126, 86);
+}
+.search{
+    padding: 1rem;
+    width: 100%;
+}
+
