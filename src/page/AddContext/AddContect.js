@@ -20,7 +20,7 @@ const AddContect = () => {
       }).catch((error)=>console.log(error));
     }
     return ( 
-        <section>
+        <section className="AddContact">
         <h1>Add ConTact</h1>
         <form onSubmit={submitHandlr}>
             <label htmlFor="name-value">Name</label>

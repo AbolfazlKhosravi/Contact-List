@@ -17,7 +17,7 @@ const Contact = ({contect,clickHandler}) => {
          <Link to={`/user/${id}`} state={{contect}} >
            <div className="Specifications">
              <span>{name}</span>
-             <span>{email}</span>
+             <span className="email">{email}</span>
            </div>
          </Link>
          </div> 

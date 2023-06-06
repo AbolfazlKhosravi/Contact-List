@@ -8,6 +8,7 @@ const Navigation = () => {
     return ( 
         <>
             <nav>
+             <h2>Contact Manager</h2>
               <ul>
                 {items.map(item=>(
                   <li key={item.to}>
@@ -16,7 +17,7 @@ const Navigation = () => {
                 ))}
             </ul>
           </nav>
-          <h2>Contact Manager</h2>
+        
         </>
      );
 }

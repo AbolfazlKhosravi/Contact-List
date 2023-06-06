@@ -1,13 +1,15 @@
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.3rem;
     padding: .2rem 1rem;
     color: #444;
     border-bottom: 2px solid #444;
     font-weight: bold;
-    height: 5rem;
+}
+nav{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 .active{
     color: rgb(0, 131, 87);
@@ -15,13 +17,38 @@ header{
 
 nav ul {
     display: flex;
+    justify-content: space-between;
 }
 nav ul li {
-    display: flex;
     list-style: none;
-    margin-left: 1rem;
+    margin-left: 3rem;
 }
 a{
     color: #444;
     text-decoration: none;
+}
+@media screen and (max-Width:780px) {
+    header{
+        padding: .1rem 1rem;
+    }
+    nav ul li {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+    h2{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-Width:480px) {
+    h2{
+        font-size: 1.1rem;
+    }
+}
+@media screen and (max-Width:355px) {
+    nav ul li {
+        font-size: .8rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
 }

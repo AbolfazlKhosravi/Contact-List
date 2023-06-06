@@ -28,7 +28,7 @@ const Edit = () => {
       }).catch((error)=>console.log(error));
     }
     return ( 
-        <section>
+        <section className="update">
         <h1>Update ConTact</h1>
         <form onSubmit={submitHandlr}>
             <label htmlFor="name-value">Name</label>

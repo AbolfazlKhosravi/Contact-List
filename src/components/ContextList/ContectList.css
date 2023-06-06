@@ -1,6 +1,9 @@
 
 .List{
     /* padding: 0rem 1rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #444;
     margin: 0rem 7rem;
 }
@@ -54,6 +57,38 @@
 }
 .search{
     padding: 1rem;
-    width: 100%;
+    width: 80%;
+}
+@media screen and (max-Width:1024px) {
+    .List{
+        margin: 0rem 3rem;
+    }
+}
+@media screen and (max-Width:780px) {
+    .search{
+        padding: 1rem;
+        width: 80%;
+    }
+   .List{
+     margin: 0rem 1rem;
+    }
+ 
+}
+@media screen and (max-Width:400px) {
+ 
+    .Specifications Span{
+      font-size: .9rem;
+    }
+    .edit{
+        font-size: 1.2rem;
+        margin-right: 1.5rem;
+    }
+    .trash{
+        font-size: 1.2rem;
+        margin-right: .1rem;
+    }
+    .Specifications .email{
+        font-size: .8rem;
+      }
 }
 

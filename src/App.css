@@ -21,5 +21,10 @@ footer{
 .ContactDetail{
   padding: 1rem;
 }
+@media screen and (max-Width:480px) {
+ footer{
+  font-size: 1.1rem;
+ }
+}
 
 
