@@ -8,9 +8,18 @@ const ContectList = () => {
   const [contects,setContects]=useState([]);
   const [allContects,setAllContects]=useState([])
   const [value,setValue]=useState("");
-  useEffect(()=>{
-      getAllContects().then((res)=>setAllContects(res.data)).catch();
-   },[getAllContects])
+  
+   useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const res = await getAllContects();
+          setAllContects(res.data);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+      fetchData();
+    }, []);
 
   const clickHandler=(id)=>{
   deleteContect(id).then(()=> {
@@ -33,7 +42,7 @@ const ContectList = () => {
   }
   useEffect(()=>{
    filterHandlr(value);
-  },[allContects,value])
+  },[allContects,value,filterHandlr,value])
     return ( 
         <div className="List">
           <input className="search" type="text" placeholder="search for ..." value={value} onChange={inputHandler} />
