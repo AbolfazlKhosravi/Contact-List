@@ -2,7 +2,7 @@ import Contact from "./contact/Contact";
 import "./ContectList.css";
 import { deleteContect } from "../../services/deletContect";
 import { getAllContects } from "../../services/getAllContects"; 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const ContectList = () => {
   const [contects,setContects]=useState([]);
@@ -30,7 +30,7 @@ const ContectList = () => {
      setValue(e.target.value);
       filterHandlr(e.target.value)
   }
-  const filterHandlr=(value)=>{
+  const filterHandlr=useCallback((value)=>{
    if(value==="") {
       console.log('2');
       setContects(allContects)
@@ -39,10 +39,11 @@ const ContectList = () => {
       const updateContects=allContects.filter(c=>Object.values(c).join(" ").toLocaleLowerCase().includes(value.toLocaleLowerCase()));
       setContects(updateContects)
      }
-  }
+  },[allContects])
+
   useEffect(()=>{
    filterHandlr(value);
-  },[allContects,filterHandlr,value])
+  },[filterHandlr, value , allContects])
     return ( 
         <div className="List">
           <input className="search" type="text" placeholder="search for ..." value={value} onChange={inputHandler} />
