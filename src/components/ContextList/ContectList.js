@@ -11,7 +11,7 @@ const ContectList = () => {
   const [value,setValue]=useState("");
   useEffect(()=>{
       getAllContects().then((res)=>setAllContects(res.data)).catch();
-   },[])
+   },[getAllContects,setAllContects])
 
   const clickHandler=(id)=>{
   deleteContect(id).then(()=> {
@@ -34,7 +34,7 @@ const ContectList = () => {
   }
   useEffect(()=>{
    filterHandlr(value);
-  },[allContects])
+  },[allContects,value])
     return ( 
         <div className="List">
           <input className="search" type="text" placeholder="search for ..." value={value} onChange={inputHandler} />

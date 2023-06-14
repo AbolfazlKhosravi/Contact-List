@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./update.css";
 import { useNavigate } from "react-router-dom";
-import postContect from "../../services/postContect";
 import { useParams } from "react-router-dom";
 import {getOneContect} from "../../services/getOneContect";
 import { putContect } from "../../services/putContect";
@@ -11,7 +10,7 @@ const Edit = () => {
      const [values,setValues]=useState({name:"",email:""});
     useEffect(()=>{
         getOneContect(params.id).then(res=>setValues(res.data)).catch()
-    },[]);
+    },[params.id]);
     const navigate=useNavigate()
     const changeHandler=(e)=>{
       setValues({...values,[e.target.name]:e.target.value})
