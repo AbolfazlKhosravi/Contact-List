@@ -1,4 +1,3 @@
-
 import Contact from "./contact/Contact";
 import "./ContectList.css";
 import { deleteContect } from "../../services/deletContect";
@@ -11,7 +10,7 @@ const ContectList = () => {
   const [value,setValue]=useState("");
   useEffect(()=>{
       getAllContects().then((res)=>setAllContects(res.data)).catch();
-   },[getAllContects,setAllContects])
+   },[getAllContects])
 
   const clickHandler=(id)=>{
   deleteContect(id).then(()=> {
