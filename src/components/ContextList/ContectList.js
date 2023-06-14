@@ -42,7 +42,7 @@ const ContectList = () => {
   }
   useEffect(()=>{
    filterHandlr(value);
-  },[allContects,value,filterHandlr,value])
+  },[allContects,filterHandlr,value])
     return ( 
         <div className="List">
           <input className="search" type="text" placeholder="search for ..." value={value} onChange={inputHandler} />
